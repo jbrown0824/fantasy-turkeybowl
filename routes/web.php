@@ -11,6 +11,13 @@
 |
 */
 
-$router->get('/', function () use ($router) {
-    return $router->app->version();
+$router->get('/', 'SiteController@index');
+$router->get('/matchup/{id}', 'SiteController@matchup');
+
+$router->get('/api/update-score/', 'ScoreController@index');
+
+$router->get('/submit', function() {
+    return view('manual');
 });
+
+$router->post('/post', 'ScoreController@manualUpdate');
