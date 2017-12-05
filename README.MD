@@ -8,7 +8,7 @@ Install:
 
 - Clone Repo
 ```
-cd turkeybowl
+cd fantasy-turkeybowl
 composer install
 php artisan migrate --seed
 ```
